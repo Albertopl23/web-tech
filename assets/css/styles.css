@@ -1,0 +1,506 @@
+/* ==========================================================================
+   CONFIGURACIÓN Y VARIABLES
+   ========================================================================== */
+:root {
+    --brand-color: #00d4ff;     /* Cyan eléctrico */
+    --accent-color: #7000ff;    /* Morado profundo */
+    --bg-dark: #0f172a;         /* Fondo oscuro elegante */
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --gradient: linear-gradient(135deg, var(--brand-color), var(--accent-color));
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Evita scroll horizontal por secciones anchas */
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN (ESTILO PROFESIONAL)
+   ========================================================================== */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--bg-dark);
+}
+
+.logo span {
+    color: var(--brand-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--brand-color);
+}
+
+/* ==========================================================================
+   ESTRUCTURA PRINCIPAL Y HERO
+   ========================================================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+#hero {
+    background: var(--bg-dark);
+    color: white;
+    padding: 100px 20px 140px; /* Más padding abajo para el efecto solapado */
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+#hero h1 {
+    font-size: 3.2rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   COMPONENTES (TARJETAS Y BOTONES)
+   ========================================================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+article {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+article h3 a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.btn-read {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--gradient);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--brand-color);
+    color: white;
+}
+
+.category-tag {
+    display: inline-block;
+    background: var(--gradient);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+/* ==========================================================================
+   SECCIONES DE LA HOME EXTENSA
+   ========================================================================== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0 30px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.value-proposition {
+    display: flex;
+    gap: 40px;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.value-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.bg-light {
+    background: #eef2f7;
+    padding: 80px 20px;
+    margin: 60px -50vw;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.seo-text {
+    background: white;
+    padding: 60px;
+    border-radius: 24px;
+    margin: 60px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* ==========================================================================
+   ESTILOS DE LECTURA (PARA ARTÍCULOS DEL BLOG)
+   ========================================================================== */
+.post-content {
+    background: #ffffff;
+    padding: 60px 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    margin-top: -80px; /* Solapamiento con el hero */
+    position: relative;
+    z-index: 10;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--accent-color);
+}
+
+.post-content p {
+    font-size: 1.15rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.8;
+}
+
+.info-box {
+    background: linear-gradient(to right, #f8fafc, #eff6ff);
+    border-left: 6px solid var(--brand-color);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+/* ==========================================================================
+   FOOTER Y RESPONSIVE
+   ========================================================================== */
+footer {
+    background: var(--bg-dark);
+    color: #94a3b8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.2rem; /* Tamaño más pequeño para que no se salga */
+        padding: 0 10px;   /* Margen interno para que no toque los bordes */
+        word-wrap: break-word; /* Fuerza el salto de línea si la palabra es muy larga */
+    }
+
+    #hero {
+        padding: 60px 20px 100px; /* Ajustamos el padding del hero en móvil */
+    }
+}
+
+
+
+/*Mejor teclado para empezar a programar*/
+
+.product-card {
+    border: 2px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px 0;
+    transition: border-color 0.3s;
+}
+
+.product-card:hover {
+    border-color: var(--brand-color);
+}
+
+.product-card h2 {
+    margin-top: 0 !important;
+    color: var(--bg-dark);
+}
+
+.product-card ul {
+    background: #f8fafc;
+    padding: 20px 20px 20px 40px !important;
+    border-radius: 8px;
+    margin: 20px 0 !important;
+}
+
+
+/* Busca y actualiza estas partes en tu CSS */
+
+.bg-light {
+    background: #f8fafc;
+    padding: 60px 0; /* Espacio arriba y abajo */
+    margin: 40px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Forzamos a que el contenedor dentro de bg-light no sea flex por defecto */
+.bg-light .nav-container {
+    display: block; 
+    margin: 0 auto;
+}
+
+/* Aseguramos que el encabezado de la sección use todo el espacio central */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+
+/* Botón Explorar Reviews Mejorado */
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 24px;
+    background: var(--gradient);
+    color: white !important; /* Forzamos color blanco */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    border: none;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(112, 0, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+/* El icono de la flecha (opcional, le da un toque pro) */
+.btn-pill::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-pill:hover::after {
+    transform: translateX(4px);
+}
+
+
+/* Estilos para la página Sobre Mí */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Por ahora una columna, fácil y limpio */
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+/* BOTÓN SECUNDARIO (Visible siempre) */
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent; /* Fondo transparente al inicio */
+    color: var(--bg-dark) !important; /* Texto oscuro SIEMPRE visible */
+    border: 2px solid var(--bg-dark); /* Borde oscuro */
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 1 !important; /* Aseguramos que no sea invisible */
+}
+
+/* EFECTO HOVER (Al pasar el ratón) */
+.btn-secondary:hover {
+    background-color: var(--bg-dark); /* El fondo se vuelve oscuro */
+    color: white !important; /* El texto se vuelve blanco */
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Si el botón está sobre fondo oscuro */
+#hero .btn-secondary {
+    color: white !important;
+    border-color: white;
+}
+
+#hero .btn-secondary:hover {
+    background-color: white;
+    color: var(--bg-dark) !important;
+}
+
+
+#hero h1 {
+    font-size: 3.2rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-background-color: transparent; /* Aseguramos compatibilidad */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Damos un poco más de aire */
+    display: block;
+    width: 100%;
+    overflow: visible; /* Para que no corte el degradado */
+}
+
+
+/* ARREGLO UNIVERSAL PARA TÍTULOS */
+h1, .post-content h1, #hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.3; /* Aumentamos el espacio entre líneas para que no se corte por arriba/abajo */
+    margin-bottom: 20px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: visible; /* CRÍTICO: Evita que la caja corte el degradado */
+    display: block;
+    word-wrap: break-word; /* Si una palabra es muy larga, la rompe para que no se salga */
+    padding-bottom: 5px; /* Pequeño margen para letras con "cola" como la g, j, p */
+}
+
+/* Evitar que el degradado se rompa al saltar de línea */
+h1 {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+
+/* Arreglo específico para que no se corte por arriba */
+.post-content h1, #hero h1 {
+    padding-top: 15px; /* Espacio de seguridad para que no se corte la parte de arriba */
+    line-height: 1.4;  /* Altura de línea suficiente para el degradado */
+    overflow: visible; 
+    display: block;
+}
+
+
+.meta-container {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
