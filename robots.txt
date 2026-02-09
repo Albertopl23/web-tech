@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Indica dónde está tu mapa del sitio
-Sitemap: https://guiatech.app/sitemap.xml
+Sitemap: https://techguia.es//sitemap.xml

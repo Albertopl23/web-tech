@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://guiatech.netlify.app/</loc>
+    <loc>https://techguia.es/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://guiatech.app/blog/que-es-javascript.html</loc>
+    <loc>https://techguia.es/blog/que-es-javascript.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guiatech.app/blog/instalar-vscode.html</loc>
+    <loc>https://techguia.es/blog/instalar-vscode.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://guiatech.app/reviews/index.html</loc>
+    <loc>https://techguia.es/reviews/index.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://guiatech.app/reviews/mejor-teclado-mecanico-programar.html</loc>
+    <loc>https://techguia.es/reviews/mejor-teclado-mecanico-programar.html</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
