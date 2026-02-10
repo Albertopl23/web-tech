@@ -1,59 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://techguia.es/</loc>
+    <lastmod>2026-02-10</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://techguia.es/sobre-mi.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://techguia.es/reviews/index.html</loc>
+    <loc>https://techguia.es/reviews/ratones.html</loc>
+    <lastmod>2026-02-10</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://techguia.es/reviews/teclados.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://techguia.es/reviews/monitores.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://techguia.es/reviews/ratones.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://techguia.es/reviews/auriculares.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://techguia.es/reviews/sillas.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://techguia.es/reviews/monitores.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://techguia.es/reviews/accesorios.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://techguia.es/blog/glosario.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techguia.es/blog/recursos-gratuito.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://techguia.es/blog/comparativa1.html</loc>
+    <lastmod>2026-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://techguia.es/blog/instalar-vscode.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://techguia.es/blog/que-es-javascript.html</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://techguia.es/cookies.html</loc>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://techguia.es/privacidad.html</loc>
-    <priority>0.3</priority>
+    <loc>https://techguia.es/sobre-mi.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.4</priority>
   </url>
 </urlset>
