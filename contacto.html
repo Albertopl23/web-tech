@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | TechGuía</title>
+    <title>Contacto - ¿Tienes dudas sobre tu Setup? | TechGuía</title>
+    <meta name="description" content="¿Necesitas ayuda para elegir tu próximo teclado o monitor? Ponte en contacto con TechGuía. Resolvemos tus dudas sobre hardware y productividad para programadores.">
+    
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="img/logo.png" type="image/png">
 </head>
@@ -23,33 +25,40 @@
     </nav>
 </header>
 
-<main class="post-content" style="max-width: 700px; margin: 60px auto; padding: 0 20px;">
+<main class="post-content" style="max-width: 800px; margin: 60px auto; padding: 0 20px;">
     <section id="header-post" style="text-align: center; margin-bottom: 40px;">
-        <h1>Contacto</h1>
-        <p>¿Tienes alguna duda, sugerencia o feedback? Escríbeme y te responderé lo antes posible.</p>
+        <h1>Hablemos de Tecnología</h1>
+        <p style="font-size: 1.1rem; color: #4a5568;">¿Dudas con una review? ¿Quieres proponer un tutorial? Estoy al otro lado del teclado para ayudarte a optimizar tu entorno de trabajo.</p>
     </section>
 
-    <form name="contacto-techguia" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 20px; background: #f8fafc; padding: 40px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;">
         
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="nombre" style="font-weight: 600; color: #1a202c;">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem;">
-        </div>
+        <form name="contacto-techguia" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 20px; background: #ffffff; padding: 40px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            
+            <input type="hidden" name="form-name" value="contacto-techguia" />
 
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="email" style="font-weight: 600; color: #1a202c;">Correo Electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem;">
-        </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label for="nombre" style="font-weight: 600; color: #1a202c;">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem; outline-color: #3182ce;">
+            </div>
 
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <label for="mensaje" style="font-weight: 600; color: #1a202c;">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="6" placeholder="¿En qué puedo ayudarte?" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem; resize: vertical;"></textarea>
-        </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label for="email" style="font-weight: 600; color: #1a202c;">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem; outline-color: #3182ce;">
+            </div>
 
-        <button type="submit" style="background: #3182ce; color: white; padding: 15px; border: none; border-radius: 10px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#2b6cb0'" onmouseout="this.style.background='#3182ce'">
-            Enviar Mensaje
-        </button>
-    </form>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label for="mensaje" style="font-weight: 600; color: #1a202c;">Mensaje o Consulta</label>
+                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntame qué necesitas..." required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0; font-size: 1rem; resize: vertical; outline-color: #3182ce;"></textarea>
+            </div>
+
+            <button type="submit" style="background: #3182ce; color: white; padding: 15px; border: none; border-radius: 10px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3);" onmouseover="this.style.background='#2b6cb0'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#3182ce'; this.style.transform='translateY(0)'">
+                Enviar Mensaje →
+            </button>
+        </form>
+
+        
+    </div>
 </main>
 
 <footer class="main-footer" style="background: #1a202c; color: white; padding: 40px 20px; text-align: center; margin-top: 50px;">
@@ -57,12 +66,12 @@
         <div class="logo">Tech<span>Guía</span></div>
         <p>Tu guía de hardware para programadores.</p>
         <p>
-            <a href="index.html" style="color: #a0aec0;">Inicio</a> | 
-            <a href="cookies.html" style="color: #a0aec0;">Cookies</a> | 
-            <a href="contacto.html" style="color: #a0aec0;">Contacto</a> |
-            <a href="sobre-mi.html" style="color: #a0aec0;">Sobre mí</a>
+            <a href="index.html" style="color: #a0aec0; text-decoration: none;">Inicio</a> | 
+            <a href="blog/index.html" style="color: #a0aec0; text-decoration: none;">Blog</a> |
+            <a href="sobre-mi.html" style="color: #a0aec0; text-decoration: none;">Sobre mí</a>
         </p>
-        <p style="font-size: 0.8rem; color: #718096; margin-top: 20px;">&copy; 2026 TechGuia.es</p>
+        <hr style="border: 0; border-top: 1px solid #2d3748; margin: 20px 0; max-width: 200px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 0.8rem; color: #718096;">&copy; 2026 TechGuia.es - Análisis independientes de hardware.</p>
     </div>
 </footer>
 

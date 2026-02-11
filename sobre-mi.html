@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí | Mi Blog Tech</title>
-    <meta name="description" content="Conoce la historia detrás de este blog de tecnología y desarrollo web.">
+    <title>Sobre Mí - La Historia detrás de TechGuía | 2026</title>
+    <meta name="description" content="Conoce quién está detrás de TechGuía. Pasión por el hardware, el código y la productividad para desarrolladores. Nuestra filosofía de análisis honestos.">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="./img/logo.png" type="image/png">
+    <style>
+        /* Ajuste para el contenido "Sobre mí" */
+        .about-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            line-height: 1.8;
+        }
+        .hero-about {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,48 +43,64 @@
             <a href="index.html" class="logo">Tech<span>Guía</span></a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="blog/que-es-javascript.html">Tutoriales</a></li>
+                <li><a href="blog/index.html">Tutoriales</a></li>
                 <li><a href="reviews/index.html">Hardware</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-<div id="hero">
+<div class="hero-about">
     <h1>Pasión por el Código y el Hardware</h1>
-    <p>Descubre quién está detrás de este proyecto y por qué confían en nuestras guías.</p>
+    <p>Ayudando a desarrolladores a construir su setup ideal desde 2026.</p>
 </div>
 
-<main class="post-content">
-    <div class="about-grid">
-        <div class="about-text">
-            <h2>Mi Misión</h2>
-            <p>Empecé este blog porque me di cuenta de que hay demasiada información técnica compleja. Mi objetivo es <strong>simplificar el camino para nuevos programadores</strong> y analizar el hardware que realmente merece la pena.</p>
-            
-            <p>En este espacio no solo encontrarás tutoriales de JavaScript o VS Code; encontrarás análisis honestos basados en el uso diario. No recomiendo nada que no usaría yo mismo para trabajar.</p>
+<main class="about-content">
+    <section>
+        <h2>Mi Misión en TechGuía</h2>
+        <p>Empecé este proyecto al darme cuenta de que el mercado está saturado de reviews de hardware "patrocinadas" que no cuentan la realidad del día a día de un programador. Mi objetivo es <strong>simplificar el camino para nuevos desarrolladores</strong> analizando herramientas que realmente impactan en la productividad.</p>
+        
+        <p>En este espacio no solo encontrarás tutoriales de <strong>JavaScript</strong> o <strong>VS Code</strong>; encontrarás análisis honestos basados en el uso intensivo. Mi filosofía es clara: No recomiendo ningún teclado, monitor o silla que no usaría yo mismo para trabajar durante 10 horas seguidas.</p>
+    </section>
 
-            <div class="info-box">
-                <strong>¿Por qué seguir este blog?</strong>
-                <ul>
-                    <li>Contenido actualizado a 2026.</li>
-                    <li>Reviews sin filtros de hardware profesional.</li>
-                    <li>Guías paso a paso para principiantes.</li>
-                </ul>
-            </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <h3>🔍 Análisis Real</h3>
+            <p>Probamos cada periférico en entornos de desarrollo reales antes de emitir un veredicto.</p>
+        </div>
+        <div class="value-card">
+            <h3>🌱 Enfoque Junior</h3>
+            <p>Explicamos los conceptos técnicos (SSD, NVMe, RAM) de forma que cualquiera pueda entenderlos.</p>
+        </div>
+        <div class="value-card">
+            <h3>⚡ Productividad</h3>
+            <p>Todo nuestro contenido está enfocado en ahorrarte tiempo y cuidar tu salud postural.</p>
+        </div>
+        <div class="value-card">
+            <h3>🛡️ Independencia</h3>
+            <p>No aceptamos patrocinios que condicionen nuestra opinión. Si algo es malo, te lo diremos claro.</p>
         </div>
     </div>
+
+    <section style="margin-top: 60px; text-align: center; background: #ebf8ff; padding: 40px; border-radius: 20px;">
+        <h2>¿Hablamos?</h2>
+        <p>Si tienes alguna duda técnica o quieres proponer un tema para el blog, estaré encantado de leerte.</p>
+        <a href="contacto.html" class="btn-read" style="background: #3182ce; display: inline-block; margin-top: 15px;">Ir a Contacto →</a>
+    </section>
 </main>
 
-<footer class="main-footer" style="background: #1a202c; color: white; padding: 40px 20px; text-align: center; margin-top: 50px;">
-    <div class="footer-container">
-        <div class="logo">Tech<span>Guía</span></div>
-        <p>Tu guía de hardware para programadores.</p>
-        <p>
-            <a href="../index.html" style="color: #a0aec0;">Inicio</a> | 
-            <a href="../cookies.html" style="color: #a0aec0;">Cookies</a> | 
-            <a href="../sobre-mi.html" style="color: #a0aec0;">Sobre mí</a>
-        </p>
-        <p style="font-size: 0.8rem; color: #718096; margin-top: 20px;">&copy; 2026 TechGuia.es</p>
+<footer class="main-footer" style="background: #1a202c; color: white; padding: 60px 20px; text-align: center; width: 100%; margin-top: 80px;">
+    <div class="footer-container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="logo" style="margin-bottom: 20px;">Tech<span>Guía</span></div>
+        <p style="margin-bottom: 20px; color: #a0aec0;">Tu guía de hardware y software para el desarrollo profesional.</p>
+        <div class="footer-links" style="margin-bottom: 30px;">
+            <a href="index.html" style="color: #a0aec0; text-decoration: none; margin: 0 15px;">Inicio</a> | 
+            <a href="cookies.html" style="color: #a0aec0; text-decoration: none; margin: 0 15px;">Cookies</a> | 
+            <a href="contacto.html" style="color: #a0aec0; text-decoration: none; margin: 0 15px;">Contacto</a>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #2d3748; margin-bottom: 20px;">
+        <p style="font-size: 0.85rem; color: #718096;">&copy; 2026 TechGuia.es - Pasión por el hardware independiente.</p>
     </div>
 </footer>
 
