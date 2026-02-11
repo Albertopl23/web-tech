@@ -41,6 +41,12 @@
         </div>
     </section>
 
+    <section class="seo-text container" style="padding: 80px 20px; max-width: 900px; margin: 0 auto;">
+        <h2>Tu recurso de confianza en Desarrollo Web y Tecnología</h2>
+        <p>Bienvenido a <strong>TechGuía</strong>. Este proyecto nació para <b>ayudar a nuevos programadores</b> a dominar el desarrollo web y elegir el hardware adecuado. Aquí analizamos cada herramienta pensando en la relación calidad-precio.</p>
+        <p>Si buscas cómo configurar tu entorno en <b>Visual Studio Code</b> o dudas sobre qué monitor comprar para proteger tu vista, estás en el lugar correcto. Nuestro compromiso es ofrecerte análisis honestos y guías fáciles de seguir.</p>
+    </section>
+
     <section class="value-proposition" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 20px; text-align: center;">
         <div class="value-item" style="padding: 20px; background: #f8fafc; border-radius: 15px;">
             <h3 style="color: #3182ce;">🚀 Tutoriales Reales</h3>
@@ -120,11 +126,32 @@
         </div>
     </section>
 
-    <section class="seo-text container" style="padding: 80px 20px; max-width: 900px; margin: 0 auto;">
-        <h2>Tu recurso de confianza en Desarrollo Web y Tecnología</h2>
-        <p>Bienvenido a <strong>TechGuía</strong>. Este proyecto nació para <b>ayudar a nuevos programadores</b> a dominar el desarrollo web y elegir el hardware adecuado. Aquí analizamos cada herramienta pensando en la relación calidad-precio.</p>
-        <p>Si buscas cómo configurar tu entorno en <b>Visual Studio Code</b> o dudas sobre qué monitor comprar para proteger tu vista, estás en el lugar correcto. Nuestro compromiso es ofrecerte análisis honestos y guías fáciles de seguir.</p>
-    </section>
+    <section id="setup-builder" style="background: #f8fafc; padding: 60px 20px; border-radius: 30px; margin: 40px 0; border: 2px solid #e2e8f0;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="color: #1a202c; margin-bottom: 10px;">Calculador de Setup Pro</h2>
+        <p style="color: #4a5568; margin-bottom: 30px;">Selecciona tu perfil y descubre el hardware ideal para tu carrera.</p>
+
+        <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap;">
+            <button onclick="buildSetup('junior')" class="btn-setup" style="padding: 12px 20px; border-radius: 8px; border: 2px solid #3182ce; background: white; cursor: pointer; font-weight: bold; color: #3182ce;">🐣 Junior (Ahorro)</button>
+            <button onclick="buildSetup('mid')" class="btn-setup" style="padding: 12px 20px; border-radius: 8px; border: 2px solid #3182ce; background: white; cursor: pointer; font-weight: bold; color: #3182ce;">💻 Mid-Level (Calidad/Precio)</button>
+            <button onclick="buildSetup('senior')" class="btn-setup" style="padding: 12px 20px; border-radius: 8px; border: 2px solid #3182ce; background: white; cursor: pointer; font-weight: bold; color: #3182ce;">👑 Senior (Top Rendimiento)</button>
+        </div>
+
+        <div id="setup-result" style="display: none; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: left;">
+            <h3 id="result-title" style="color: #2d3748; margin-top: 0;"></h3>
+            <p id="result-desc" style="color: #718096;"></p>
+            <ul id="result-list" style="list-style: none; padding: 0; margin: 20px 0;">
+                </ul>
+            <div style="text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+                <p style="font-weight: bold; color: #2d3748;">Inversión estimada: <span id="result-price" style="color: #38a169;"></span></p>
+                <small style="color: #a0aec0; display: block; margin-bottom: 15px;">*Precios sujetos a ofertas de Amazon.</small>
+                <a href="reviews/index.html" class="btn-read" style="background: #3182ce; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Ver todas las Reviews →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
 </main>
 
 <section style="background: #edf2f7; padding: 60px 20px; text-align: center;">
@@ -170,6 +197,75 @@
         localStorage.setItem('cookies-aceptadas', 'true');
         banner.style.display = 'none';
     };
+</script>
+
+<script>
+function buildSetup(perfil) {
+    const resultDiv = document.getElementById('setup-result');
+    const title = document.getElementById('result-title');
+    const desc = document.getElementById('result-desc');
+    const list = document.getElementById('result-list');
+    const price = document.getElementById('result-price');
+
+    // Datos de los setups
+    const setups = {
+        junior: {
+            title: "Setup 'Early Bird' 🐣",
+            desc: "Ideal para estudiantes o programadores que empiezan. Funcional, duradero y económico.",
+            items: [
+                "⌨️ Teclado: Logitech K120 (Sencillo pero eterno)",
+                "🖱️ Ratón: Logitech G203 (Precisión a bajo coste)",
+                "🖥️ Monitor: ASUS VP228HE (Filtro luz azul)"
+            ],
+            total: "~180€"
+        },
+        mid: {
+            title: "Setup 'Focus Master' 💻",
+            desc: "Para el dev que ya trabaja 8h y necesita comodidad sin arruinarse.",
+            items: [
+                "⌨️ Teclado: Keychron V1 (Mecánico Pro)",
+                "🖱️ Ratón: Logitech MX Anywhere (Productividad)",
+                "🖥️ Monitor: Dell UltraSharp 24' (Colores reales)",
+                "🎧 Cascos: Soundcore Q30 (Cancelación de ruido)"
+            ],
+            total: "~450€"
+        },
+        senior: {
+            title: "Setup 'Overkill' 👑",
+            desc: "Máximo rendimiento, ergonomía total y estética premium.",
+            items: [
+                "⌨️ Teclado: Logitech MX Master Keys / Mechanical",
+                "🖱️ Ratón: Logitech MX Master 3S (El Rey)",
+                "🖥️ Monitor: LG UltraWide 34' 4K",
+                "🪑 Silla: Ergonómica de alto impacto",
+                "🎧 Cascos: Sony WH-1000XM5"
+            ],
+            total: "+1.200€"
+        }
+    };
+
+    const choice = setups[perfil];
+
+    // Actualizar contenido
+    title.innerText = choice.title;
+    desc.innerText = choice.desc;
+    price.innerText = choice.total;
+    
+    // Limpiar y llenar lista
+    list.innerHTML = "";
+    choice.items.forEach(item => {
+        let li = document.createElement('li');
+        li.style.padding = "10px 0";
+        li.style.borderBottom = "1px solid #f1f5f9";
+        li.style.color = "#4a5568";
+        li.innerHTML = item;
+        list.appendChild(li);
+    });
+
+    // Mostrar con efecto suave
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 </body>
