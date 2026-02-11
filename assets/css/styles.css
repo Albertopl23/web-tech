@@ -543,3 +543,133 @@ h1 {
 }
 
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HERO SEO --- */
+.hero-seo {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--slate) 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.hero-seo h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-seo h1 span {
+    color: var(--primary);
+}
+
+/* --- GRID DE COMPONENTES --- */
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.seo-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.seo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.keyword-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ebf8ff;
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: var(--dark);
+}
+
+.card-body p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* --- BOTONES --- */
+/* --- BOTONES DE AFILIADO OPTIMIZADOS --- */
+.btn-affiliate {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #3182ce; /* Azul principal */
+    color: #ffffff !important; /* Forzamos texto blanco siempre */
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* ESTADO AL PASAR EL RATÓN (HOVER) */
+.btn-affiliate:hover {
+    background-color: #2b6cb0; /* Azul más oscuro para dar feedback */
+    color: #ffffff !important; /* Aseguramos que el texto SIGA siendo blanco */
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 5px 15px rgba(49, 130, 206, 0.4); /* Resplandor azul */
+}
+
+/* Evitamos que el texto cambie de color si el enlace ya ha sido visitado */
+.btn-affiliate:visited {
+    color: #ffffff !important;
+}
+
+/* --- SECCIÓN DE TEXTO SEO --- */
+.content-section {
+    max-width: 850px;
+    margin: 80px auto;
+    background: var(--light-bg);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.content-section h2, .content-section h3 {
+    color: var(--dark);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero-seo h1 {
+        font-size: 2rem;
+    }
+    
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+}
