@@ -673,3 +673,21 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Contenedor de la imagen dentro de la tarjeta */
+.product-card img {
+    width: 100%;           /* Ocupa todo el ancho disponible del div */
+    height: 220px;         /* Altura fija para que todas las tarjetas midan lo mismo */
+    object-fit: contain;   /* AJUSTE CLAVE: Mantiene la proporción sin recortar ni deformar */
+    background-color: #fff; /* Fondo blanco por si la imagen es pequeña o transparente */
+    padding: 10px;         /* Espacio para que el producto no toque los bordes */
+    border-radius: 8px;    /* Bordes suaves */
+    display: block;        /* Elimina espacios fantasma debajo de la imagen */
+    margin: 0 auto 15px;   /* Centrada y con espacio abajo */
+    transition: transform 0.3s ease; /* Para que al pasar el ratón se mueva suave */
+}
+
+/* Efecto hover: un pequeño zoom cuando el usuario pasa el ratón */
+.product-card:hover img {
+    transform: scale(1.05);
+}
