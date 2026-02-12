@@ -691,3 +691,29 @@ h1 {
 .product-card:hover img {
     transform: scale(1.05);
 }
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Pone el logo arriba y el menú abajo */
+        padding: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        overflow-x: auto; /* Permite scroll lateral si no cabe */
+        white-space: nowrap; /* Evita que los enlaces salten de línea */
+        width: 100%;
+        padding: 10px 0;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhone */
+        gap: 15px; /* Espacio entre enlaces */
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none; /* Oculta la barra de scroll para que quede más limpio */
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+}
