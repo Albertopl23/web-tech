@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Consola de Diagnóstico Técnico | Reparación de PC en Vivo | TechGuía</title>
+    <meta name="description" content="¿Tu PC emite pitos o no arranca? Usa nuestra consola interactiva para identificar fallos de hardware y obtener comandos de reparación para Windows y Linux al instante.">
+    <meta name="keywords" content="reparación de pc, pitos bios, consola de diagnóstico, comandos windows, comandos linux, soporte técnico hardware">
+    <meta name="author" content="TechGuía.es">
+
+    <meta property="og:title" content="🔧 Consola de Diagnóstico Técnico Live | TechGuía.es">
+    <meta property="og:description" content="Herramienta interactiva para detectar fallos de hardware y soluciones rápidas de sistema. ¡Pruébala gratis!">
+    <meta property="og:image" content="https://techguia.es/assets/img/preview-consola.jpg"> <meta property="og:url" content="https://techguia.es/hardware/oraculo.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consola de Diagnóstico Técnico | TechGuía">
+    <meta name="twitter:description" content="Diagnostica tu PC mediante códigos de pitidos y comandos de rescate con nuestra nueva herramienta online.">
+
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+    <style>
+        /* CSS ESPECÍFICO PARA LA CONSOLA (Sin romper el resto) */
+        :root {
+            --term-bg: #0d1117;
+            --accent: #39d353;
+            --info: #58a6ff;
+        }
+
+        .main-content {
+            padding: 50px 20px;
+            background-color: #f0f2f5; /* Color de fondo suave para que resalte la terminal */
+            min-height: 80vh;
+        }
+
+        .terminal-window {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--term-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid #30363d;
+            font-family: 'Consolas', monospace;
+        }
+
+        .terminal-header {
+            background: #161b22;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+
+        .terminal-content { padding: 30px; color: #c9d1d9; }
+        
+        .section-box {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #30363d;
+        }
+
+        .grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .btn-beep {
+            background: #21262d;
+            border: 1px solid #30363d;
+            color: var(--info);
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.2s;
+        }
+
+        .btn-beep:hover { background: #30363d; border-color: var(--accent); color: white; }
+
+        .diag-screen {
+            background: #000;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent);
+            margin-top: 15px;
+            min-height: 50px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            background: #0d1117;
+            color: var(--accent);
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .console-box {
+            background: #000;
+            padding: 20px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        #codeOutput { color: var(--accent); white-space: pre-wrap; }
+
+        .copy-btn {
+            position: absolute; right: 10px; top: 10px;
+            background: var(--accent); color: #000;
+            border: none; padding: 5px 10px;
+            border-radius: 4px; font-weight: bold; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+    <nav class="nav-container">
+        <a href="index.html" class="logo">Tech<span>Guía</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            
+            <li>
+                <a href="oraculo.html" class="btn-nav-highlight">
+                    <span class="pulse-icon"></span> Consola Live
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="blog/index.html" class="nav-item dropbtn">Tutoriales <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="blog/comparativa1.html">Comparativa Ratones</a>
+                        <a href="blog/glosario.html">Glosario Técnico</a>
+                        <a href="blog/instalar-vscode.html">Instalar VS Code</a>
+                        <a href="blog/mejorar-productividad.html">Mejorar Productividad</a>
+                        <a href="blog/que-es-javascript.html">¿Qué es JavaScript?</a>
+                        <a href="blog/recursos-gratuitos.html">Recursos Gratuitos</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="gaming/index.html" class="nav-item dropbtn">Zona Gaming <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="gaming/streaming.html">Mundo Streaming</a>
+                        <a href="gaming/esports.html">eSports</a>
+                        <a href="gaming/entretenimiento.html">Entretenimiento</a>
+                        <a href="gaming/simulacion.html">Simulación</a>
+                        <a href="gaming/consolas-portatiles.html">Consolas Portátiles</a>
+                        <a href="gaming/retro.html">Gaming Retro</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="reviews/index.html" class="nav-item dropbtn">Hardware <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="reviews/presupuestospc2026.html">Comparativa PCs</a>
+                        <a href="reviews/ordenador.html">Componentes PC</a>
+                        <a href="reviews/teclados.html">Teclados</a>
+                        <a href="reviews/ratones.html">Ratones</a>
+                        <a href="reviews/monitores.html">Monitores</a>
+                        <a href="reviews/auriculares.html">Auriculares</a>
+                        <a href="reviews/sillas.html">Sillas</a>
+                        <a href="reviews/accesorios.html">Accesorios</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="sobre-mi.html" class="nav-item">Sobre mí</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main-content">
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+            <span style="color: #8b949e; font-size: 0.8rem; margin-left: 10px;">techguia-super-toolkit.sh</span>
+        </div>
+
+        <div class="terminal-content">
+            <h1 style="color: var(--accent); margin-top: 0;">> Consola Live - Tech Guia</h1>
+            <p>Consola de rescate v2.0 | Base de datos actualizada 2026</p>
+
+            <div class="section-box">
+                <h3 style="color: var(--info); margin-top: 0;">🧠 Analizador de Pitidos BIOS (Universal)</h3>
+                <div class="grid-buttons">
+                    <button class="btn-beep" onclick="diag('1c')">1 Corto (OK)</button>
+                    <button class="btn-beep" onclick="diag('2c')">2 Cortos (RAM)</button>
+                    <button class="btn-beep" onclick="diag('3c')">3 Cortos (RAM)</button>
+                    <button class="btn-beep" onclick="diag('5c')">5 Cortos (CPU)</button>
+                    <button class="btn-beep" onclick="diag('1l1c')">1L + 1C (Placa)</button>
+                    <button class="btn-beep" onclick="diag('1l2c')">1L + 2C (GPU)</button>
+                    <button class="btn-beep" onclick="diag('1l3c')">1L + 3C (EGA/VGA)</button>
+                    <button class="btn-beep" onclick="diag('cont')">Continuo (Fuente)</button>
+                </div>
+                <div class="diag-screen" id="diagOutput">Esperando señal de la placa base...</div>
+            </div>
+
+            <div class="section-box">
+                <h3 style="color: var(--info); margin-top: 0;">⚡ Centro de Comandos de Rescate</h3>
+                <select id="cmdSelector" onchange="updateCmd()" style="margin-bottom: 20px;">
+                    <optgroup label="Soporte Sistema (Windows)">
+                        <option value="w1">Reparar archivos corruptos (SFC)</option>
+                        <option value="w2">Reparar imagen de Windows (DISM)</option>
+                        <option value="w3">Chequear y reparar disco (Chkdsk)</option>
+                        <option value="w4">Ver clave de producto original</option>
+                    </optgroup>
+                    <optgroup label="Redes e Internet">
+                        <option value="n1">Resetear stack TCP/IP y DNS</option>
+                        <option value="n2">Listar dispositivos en red local</option>
+                        <option value="n3">Ver contraseñas de WiFi guardadas</option>
+                        <option value="n4">Ping continuo (Test estabilidad)</option>
+                    </optgroup>
+                    <optgroup label="Optimización y Apps">
+                        <option value="o1">Instalar Chrome/VSCode/Steam (Winget)</option>
+                        <option value="o2">Borrar archivos temporales (Cleanmgr)</option>
+                        <option value="o3">Ver procesos que más consumen</option>
+                    </optgroup>
+                    <optgroup label="Linux (SysAdmin)">
+                        <option value="l1">Actualizar repositorios y sistema</option>
+                        <option value="l2">Liberar espacio en caché APT</option>
+                        <option value="l3">Ver uso de disco por carpetas (DU)</option>
+                    </optgroup>
+                </select>
+
+                <div class="console-box" style="background: #000; padding: 20px; border-radius: 8px; position: relative;">
+                    <div style="color: #4a5568; font-size: 0.7rem; margin-bottom: 10px; font-family: monospace;">TERMINAL OUTPUT:</div>
+                    <code id="codeOutput" style="color: #39d353; font-family: 'JetBrains Mono', monospace; display: block; min-height: 40px;"># Selecciona una herramienta</code>
+                    <button class="copy-btn" onclick="copyCode()" style="position: absolute; right: 15px; top: 15px; background: var(--primary); color: #000; border: none; padding: 5px 12px; border-radius: 4px; font-weight: bold; cursor: pointer;">COPIAR</button>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <h3 style="color: var(--info); margin-top: 0;">📋 Guía de Atajos de Emergencia</h3>
+                <table style="width: 100%; color: #c9d1d9; font-size: 0.9rem; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid #30363d;">
+                        <td style="padding: 10px; color: var(--primary);">BIOS/Boot Menu</td>
+                        <td style="padding: 10px;">F2, F12, DEL, ESC (Varía según marca)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #30363d;">
+                        <td style="padding: 10px; color: var(--primary);">Modo Seguro</td>
+                        <td style="padding: 10px;">Shift + Reiniciar (desde Windows)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; color: var(--primary);">Administrador de Tareas</td>
+                        <td style="padding: 10px;">Ctrl + Shift + Esc</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function diag(type) {
+        const out = document.getElementById('diagOutput');
+        const map = {
+            '1c': "🟢 <strong>POST OK:</strong> Todo correcto.",
+            '2c': "🟡 <strong>ERROR PARIDAD:</strong> Error en la memoria RAM (base).",
+            '3c': "🟡 <strong>ERROR RAM:</strong> Fallo en los primeros 64KB de memoria.",
+            '5c': "🔴 <strong>ERROR CPU:</strong> Fallo en el procesador.",
+            '1l1c': "🔴 <strong>ERROR PLACA:</strong> Fallo general en la placa base.",
+            '1l2c': "🔴 <strong>ERROR GPU:</strong> Fallo en el adaptador de video.",
+            '1l3c': "🔴 <strong>ERROR EGA/VGA:</strong> Fallo en el controlador de video.",
+            'cont': "🚨 <strong>ERROR ELÉCTRICO:</strong> Fallo en fuente de alimentación o placa."
+        };
+        out.innerHTML = map[type] || "Código no reconocido.";
+    }
+
+    function updateCmd() {
+        const val = document.getElementById('cmdSelector').value;
+        const out = document.getElementById('codeOutput');
+        const commands = {
+            'w1': 'sfc /scannow',
+            'w2': 'DISM /Online /Cleanup-Image /RestoreHealth',
+            'w3': 'chkdsk C: /f /r',
+            'w4': 'wmic path softwarelicensingservice get OA3xOriginalProductKey',
+            'n1': 'ipconfig /flushdns && netsh winsock reset && netsh int ip reset',
+            'n2': 'arp -a',
+            'n3': 'netsh wlan show profile name="NOMBRE_WIFI" key=clear',
+            'n4': 'ping 8.8.8.8 -t',
+            'o1': 'winget install Google.Chrome VideoLAN.VLC Microsoft.VisualStudioCode',
+            'o2': 'cleanmgr /sageset:1 && cleanmgr /sagerun:1',
+            'o3': 'tasklist /v',
+            'l1': 'sudo apt update && sudo apt upgrade -y',
+            'l2': 'sudo apt autoclean && sudo apt autoremove',
+            'l3': 'du -sh * | sort -h'
+        };
+        out.innerText = commands[val] || "# Elige una opción arriba";
+    }
+
+    function copyCode() {
+        const text = document.getElementById('codeOutput').innerText;
+        if(text.startsWith("#") || text === "") return;
+        navigator.clipboard.writeText(text);
+        alert("Comando copiado al portapapeles: " + text);
+    }
+</script>
+
+    <footer class="main-footer" style="background: #1a202c; color: white; padding: 40px 20px; text-align: center; margin-top: 50px;">
+    <div class="footer-container">
+        <div class="logo">Tech<span>Guía</span></div>
+        <p>Tu guía de hardware para programadores.</p>
+        <p>
+            <a href="../index.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Inicio</a> | 
+            <a href="../cookies.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Cookies</a> | 
+            <a href="../contacto.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Contacto</a>
+        </p>
+        <p style="font-size: 0.8rem; color: #718096; margin-top: 20px;">&copy; 2026 TechGuia.es</p>
+    </div>
+</footer>
+</body>
+</html>
