@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Python desde Cero: Guía Práctica 2026 - TechGuía</title>
+    <meta name="description" content="¿Quieres aprender Python? Te enseñamos desde instalar VS Code hasta crear tu primer script de automatización. La guía definitiva para nuevos programadores.">
+    <meta property="og:title" content="🐍 Intérprete Python Online Gratis | TechGuía Studio">
+    <meta property="og:description" content="Escribe y ejecuta código Python 3.12 real directamente en tu navegador. Sin instalaciones.">
+    <meta property="og:image" content="../img/preview-python.jpg"> <meta property="og:url" content="https://techguia.es/blog/python.html">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+    background: #0f172a; /* Color oscuro profundo */
+    /* Este gradiente hace que el centro sea un poco más claro y los bordes más oscuros */
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    margin: 0;
+}
+
+/* Hacemos que la web ocupe más espacio real */
+.main-grid {
+    max-width: 1400px; /* Ampliamos el ancho total */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02); /* Un toque de cristal para los bordes */
+    backdrop-filter: blur(5px);
+}
+
+.post-content {
+    max-width: 1200px; /* De 800px pasamos a 1200px para llenar más pantalla */
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.98); /* Blanco casi puro */
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5); /* Sombra pesada para dar profundidad */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+    </style>
+</head>
+<body>
+    <div style="position: fixed; top: 20%; left: -100px; width: 300px; height: 300px; background: #3776ab; filter: blur(150px); opacity: 0.2; z-index: -1;"></div>
+<div style="position: fixed; bottom: 20%; right: -100px; width: 300px; height: 300px; background: #ffd343; filter: blur(150px); opacity: 0.1; z-index: -1;"></div>
+
+<header class="main-header">
+    <nav class="nav-container">
+        <a href="../index.html" class="logo">Tech<span>Guía</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html" class="nav-item">Inicio</a></li>
+            
+            <li>
+                <a href="../oraculo.html" class="btn-nav-highlight">
+                    <span class="pulse-icon"></span> Consola Live
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a href="index.html" class="nav-item dropbtn">Tutoriales <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="python.html">Aprende Python</a>
+                        <a href="comparativa1.html">Comparativa Ratones</a>
+                        <a href="glosario.html">Glosario Técnico</a>
+                        <a href="instalar-vscode.html">Instalar VS Code</a>
+                        <a href="mejorar-productividad.html">Mejorar Productividad</a>
+                        <a href="que-es-javascript.html">¿Qué es JavaScript?</a>
+                        <a href="recursos-gratuitos.html">Recursos Gratuitos</a>
+                        <a href="python.html">Aprender Python</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="../gaming/index.html" class="nav-item dropbtn">Zona Gaming <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="../gaming/streaming.html">Mundo Streaming</a>
+                        <a href="../gaming/esports.html">eSports</a>
+                        <a href="../gaming/4fun.html">Entretenimiento</a>
+                        <a href="../gaming/simulacion.html">Simulación</a>
+                        <a href="../gaming/consola-portatiles.html">Consolas Portátiles</a>
+                        <a href="../gaming/retro.html">Gaming Retro</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="../reviews/index.html" class="nav-item dropbtn">Hardware <i class="arrow"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-grid">
+                        <a href="../reviews/presupuestospc2026.html">Comparativa PCs</a>
+                        <a href="../reviews/ordenador.html">Componentes PC</a>
+                        <a href="../reviews/teclados.html">Teclados</a>
+                        <a href="../reviews/ratones.html">Ratones</a>
+                        <a href="../reviews/monitores.html">Monitores</a>
+                        <a href="../reviews/auriculares.html">Auriculares</a>
+                        <a href="../reviews/sillas.html">Sillas</a>
+                        <a href="../reviews/accesorios.html">Accesorios</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="../sobre-mi.html" class="nav-item">Sobre mí</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="post-content">
+
+    
+    <section id="header-post">
+        <span class="category-tag" style="background: #3776ab; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">PROGRAMACIÓN 2026</span>
+        <h1>Python desde Cero: De novato a crear tu propia automatización</h1>
+        <div class="meta-container" style="margin-top: 15px; color: #718096; font-size: 0.9rem;">
+            <span class="meta-item">📅 Actualizado: Febrero 2026</span>
+            <span class="meta-item">⏱️ Lectura: 12 min</span>
+        </div>
+    </section>
+
+    <p>¿Alguna vez has sentido que podrías ahorrar horas de trabajo si tu PC hiciera las tareas repetitivas por ti? <strong>Python</strong> es la respuesta. No es solo un lenguaje de programación; es el superpoder que necesitas para dominar tu hardware.</p>
+
+    <div class="info-box" style="background: #f0f7ff; border: 1px solid #3776ab; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <strong>¿Por qué Python?</strong> Es fácil de leer (parece inglés), tiene una comunidad gigante y te permite desde hackear luces LED hasta gestionar servidores. Si sabes escribir una lista de la compra, puedes aprender Python.
+    </div>
+
+    <h2>1. El Centro de Mando: Preparando el entorno</h2>
+    <p>Antes de picar código, necesitas una herramienta donde escribirlo. Olvida el bloc de notas; los profesionales usamos editores que nos ayudan a no cometer errores.</p>
+    
+    <div style="background: #1a202c; color: #fff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: #63b3ed; margin-top: 0;">🚀 Paso Obligatorio</h3>
+        <p>Lo primero que debes hacer es <a href="instalar-vscode.html" style="color: #ffd343; font-weight: bold;">instalar Visual Studio Code</a>. Es el editor gratuito de Microsoft que te hará la vida más fácil con sus extensiones de autocompletado.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+
+<section class="ide-container" style="margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid #333;">
+    
+    <div style="background: #2d2d2d; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #111;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: #ffd343; font-size: 1.2rem;">🐍</span>
+            <span style="color: #e0e0e0; font-family: 'Fira Code', monospace; font-size: 0.85rem; font-weight: bold;">INTERPRETADOR DE PYTHON - TECHGUIA</span>
+        </div>
+        <button id="runBtn" onclick="evaluatePython()" style="background: #28a745; color: white; border: none; padding: 8px 20px; border-radius: 5px; cursor: pointer; font-family: 'Outfit', sans-serif; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 0 #1e7e34;">
+            EJECUTAR (RUN) ▶
+        </button>
+    </div>
+
+    <div style="display: flex; background: #1e1e1e; height: 450px;">
+        
+        <div style="flex: 1; border-right: 2px solid #333; position: relative;">
+            <div style="position: absolute; left: 10px; top: 15px; color: #555; font-family: monospace; font-size: 0.8rem; text-align: right; user-select: none;">
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15
+            </div>
+            <textarea id="codeEditor" style="width: 100%; height: 100%; background: transparent; border: none; color: #9cdcfe; padding: 15px 15px 15px 35px; font-family: 'Fira Code', monospace; font-size: 1rem; outline: none; resize: none; line-height: 1.5;" spellcheck="false"># TechGuía Challenge:
+# Generador de Hardware ID Pro
+import random
+
+def generate_id():
+    chars = "ABCDEF0123456789"
+    return "".join(random.choice(chars) for _ in range(12))
+
+print("--- TECHGUÍA HARDWARE SCANNER ---")
+for i in range(3):
+    print(f"Componente {i+1} ID: {generate_id()}")
+print("---------------------------------")</textarea>
+        </div>
+
+        <div style="flex: 1; background: #000; display: flex; flex-direction: column;">
+            <div style="background: #333; color: #aaa; padding: 4px 15px; font-size: 0.7rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                Terminal de Salida
+            </div>
+            <pre id="consoleOutput" style="flex: 1; margin: 0; padding: 20px; color: #dcdcdc; font-family: 'Fira Code', monospace; font-size: 0.95rem; overflow-y: auto; white-space: pre-wrap;">[Sistema] Cargando Python Engine... Espere un momento.</pre>
+        </div>
+    </div>
+
+    <div style="background: #252526; padding: 8px 20px; color: #888; font-size: 0.75rem; display: flex; justify-content: space-between; border-top: 1px solid #333;">
+        <span>UTF-8 // Python 3.12</span>
+        <span>TechGuía © 2026</span>
+    </div>
+</section>
+
+<script>
+    let pyodide;
+
+    async function initPyodide() {
+        const output = document.getElementById("consoleOutput");
+        try {
+            pyodide = await loadPyodide();
+            output.innerHTML = ">>> Motor listo. Escribe tu código a la izquierda y pulsa EJECUTAR.";
+        } catch (err) {
+            output.innerHTML = "Error al cargar Pyodide. Revisa tu conexión.";
+        }
+    }
+
+    initPyodide();
+
+    async function evaluatePython() {
+        const code = document.getElementById("codeEditor").value;
+        const output = document.getElementById("consoleOutput");
+        const btn = document.getElementById("runBtn");
+
+        if (!pyodide) return;
+
+        btn.style.opacity = "0.5";
+        btn.innerText = "PROCESANDO...";
+        output.innerHTML = "<span style='color: #555;'>Ejecutando script...</span>\n";
+
+        // Redirigir la salida estándar de Python a JS
+        await pyodide.runPythonAsync(`
+            import sys
+            import io
+            sys.stdout = io.StringIO()
+        `);
+
+        try {
+            await pyodide.runPythonAsync(code);
+            const stdout = pyodide.runPython("sys.stdout.getvalue()");
+            output.innerHTML = stdout || "> Script ejecutado (sin salida de texto).";
+        } catch (err) {
+            output.innerHTML = `<span style="color: #ff5f56;">ERROR EN TU CÓDIGO:\n${err}</span>`;
+        }
+
+        btn.style.opacity = "1";
+        btn.innerText = "EJECUTAR (RUN) ▶";
+    }
+</script>
+
+    <h2>2. Tu primer script de Hardware</h2>
+    <p>Vamos a lo divertido. Copia este código en tu nuevo VS Code para ver cómo Python puede interactuar con la información de tu sistema. Es el primer paso para crear herramientas como nuestra <a href="../oraculo.html" style="color: #805ad5; font-weight: bold;">Consola Live</a>.</p>
+
+    <pre style="background: #2d3748; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Fira Code', monospace;">
+# Mi primer script en TechGuía
+import platform
+
+sistema = platform.system()
+procesador = platform.processor()
+
+print(f"Estás ejecutando Python en: {sistema}")
+print(f"Arquitectura detectada: {procesador}")
+    </pre>
+
+    <h2>3. Python vs JavaScript: ¿Cuál aprender primero?</h2>
+    <p>Mucha gente se confunde. Aquí la clave de TechGuía:</p>
+    <ul>
+        <li><strong>Python:</strong> Ideal para lógica pesada, IA, automatizar carpetas y análisis de hardware.</li>
+        <li><strong>JavaScript:</strong> Imprescindible si quieres que tus programas se vean bonitos en una web. Si quieres saber más, echa un ojo a <a href="que-es-javascript.html" style="color: #3776ab;">nuestra guía de JavaScript</a>.</li>
+    </ul>
+
+    <div class="cta-box" style="background: #fffdf0; border: 2px solid #ffd343; padding: 25px; border-radius: 12px; text-align: center; margin: 40px 0;">
+        <h3 style="margin-top: 0;">🔥 Consejo de Oro</h3>
+        <p>No intentes memorizar todo. La programación se aprende "bicheando". Empieza por scripts pequeños que muevan archivos o te den el clima y verás qué rápido avanzas.</p>
+        <a href="https://www.python.org/downloads/" target="_blank" class="btn-read" style="background: #3776ab; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px;">Descargar Python Oficial →</a>
+    </div>
+
+    <section class="interactive-quiz" style="margin-top: 50px; padding: 30px; background: #0f172a; border-radius: 15px; border: 2px solid #3776ab; color: white;">
+        <h2 style="color: #ffd343; margin-top: 0; text-align: center;">🚀 TEST DE NIVEL: ¿Eres un Script-Kiddie o un Futuro Pro?</h2>
+        <p style="text-align: center; color: #a0aec0;">Haz clic en las preguntas para revelar la respuesta y poner a prueba tu lógica.</p>
+        
+        <div class="quiz-item" style="margin-bottom: 15px; background: #1e293b; border-radius: 8px; overflow: hidden;">
+            <details style="padding: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; color: #ffd343;">1. Tienes un bug que no encuentras por ningún lado... ¿Cuál es el primer paso sagrado?</summary>
+                <p style="margin-top: 10px; padding-left: 20px; border-left: 3px solid #3fb950; color: #e2e8f0ec;">✅ <strong>Respuesta TechGuía:</strong> Usar el viejo pero confiable <code>print()</code> en cada línea sospechosa o consultar el log de errores. Si el PC no te habla, tú le obligas a escupir datos.</p>
+            </details>
+        </div>
+
+        <div class="quiz-item" style="margin-bottom: 15px; background: #1e293b; border-radius: 8px; overflow: hidden;">
+            <details style="padding: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; color: #ffd343;">2. ¿Qué pasa si olvidas poner los dos puntos (:) al final de un 'if' o un 'for'?</summary>
+                <p style="margin-top: 10px; padding-left: 20px; border-left: 3px solid #f85149; color: #e2e8f0;">❌ <strong>SyntaxError:</strong> Python es muy educado pero estricto. Sin los dos puntos, el código entra en pánico y no arranca. Es el equivalente a olvidarte las llaves de casa.</p>
+            </details>
+        </div>
+
+        <div class="quiz-item" style="margin-bottom: 15px; background: #1e293b; border-radius: 8px; overflow: hidden;">
+            <details style="padding: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; color: #ffd343;">3. Quieres controlar un robot o un sensor de temperatura... ¿Qué librería buscarías?</summary>
+                <p style="margin-top: 10px; padding-left: 20px; border-left: 3px solid #3776ab; color: #e2e8f0;">🤖 <strong>Librerías Pro:</strong> Buscarías <code>RPi.GPIO</code> para Raspberry o <code>pyserial</code>. Python es el lenguaje que da "manos" a tu ordenador.</p>
+            </details>
+        </div>
+
+        <div style="text-align: center; margin-top: 25px;">
+            <p style="font-size: 0.9rem; font-style: italic; color: #94a3b8;">¿Has acertado las 3? Entonces ya estás listo para saltar a nuestro <a href="instalar-vscode.html" style="color: #ffd343;">Tutorial de VS Code</a> y empezar la acción real.</p>
+        </div>
+    </section>
+
+</main>
+
+
+
+<footer class="main-footer" style="background: #1a202c; color: white; padding: 40px 20px; text-align: center; margin-top: 50px;">
+    <div class="footer-container">
+        <div class="logo">Tech<span>Guía</span></div>
+        <p>El portal para los entusiastas del hardware y el código.</p>
+        <p>
+            <a href="../index.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Inicio</a> | 
+            <a href="../cookies.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Cookies</a> | 
+            <a href="../contacto.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Contacto</a>
+        </p>
+        <p style="font-size: 0.8rem; color: #718096; margin-top: 20px;">&copy; 2026 TechGuia.es</p>
+    </div>
+</footer>
+
+</body>
+</html>
