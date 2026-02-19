@@ -1,5 +1,9 @@
 User-agent: *
+
 Allow: /
 
-# Indica dónde está tu mapa del sitio
-Sitemap: https://techguia.es//sitemap.xml
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /img/
+
+Sitemap: https://techguia.es/sitemap.xml
