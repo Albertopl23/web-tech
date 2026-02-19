@@ -52,7 +52,6 @@
             letter-spacing: 1px;
         }
 
-        /* Resaltado de la opción recomendada */
         .destacado {
             background-color: #f0f7ff;
             border-left: 3px solid #3182ce;
@@ -81,7 +80,67 @@
             font-weight: bold;
             font-size: 0.85rem;
             margin-top: 5px;
+            text-align: center;
         }
+
+        /* ESTILOS PARA LAS FICHAS DE RENDIMIENTO */
+        .contenedor-rendimiento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .ficha-stat {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ficha-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.05);
+        }
+
+        .ficha-stat h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar-container {
+            margin-bottom: 15px;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #4a5568;
+        }
+
+        .bar-bg {
+            background: #edf2f7;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .fill-green { background: #48bb78; }
+        .fill-blue { background: #4299e1; }
+        .fill-yellow { background: #ecc94b; }
+        .fill-purple { background: #9f7aea; }
 
         @media (max-width: 768px) {
             .seccion-tabla h1 { font-size: 1.5rem; }
@@ -244,6 +303,59 @@
             </table>
         </div>
 
+        <h2 style="text-align: center; margin-top: 60px; color: #2d3748;">Potencia Estimada por Perfil</h2>
+        <div class="contenedor-rendimiento">
+            
+            <div class="ficha-stat">
+                <h3><span style="font-size: 1.5rem;">🌱</span> Opción Económica</h3>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Ofimática / Browsing</span> <span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-green" style="width: 95%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Virtualización (1-2 VMs)</span> <span>50%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-yellow" style="width: 50%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Gaming 1080p</span> <span>65%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-blue" style="width: 65%"></div></div>
+                </div>
+            </div>
+
+            <div class="ficha-stat" style="border: 2px solid #3182ce; background: #f0f7ff;">
+                <h3><span style="font-size: 1.5rem;">🚀</span> Opción Workstation</h3>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Virtualización Masiva (Proxmox/ESXi)</span> <span>90%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-purple" style="width: 90%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Compilación / Multitarea</span> <span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-green" style="width: 95%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Gaming 1440p (High)</span> <span>85%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-blue" style="width: 85%"></div></div>
+                </div>
+            </div>
+
+            <div class="ficha-stat">
+                <h3><span style="font-size: 1.5rem;">👑</span> Opción Entusiasta</h3>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Renderizado 3D / 4K Video</span> <span>98%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-green" style="width: 98%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Inteligencia Artificial (Local)</span> <span>80%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-purple" style="width: 80%"></div></div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label"><span>Gaming 4K Ultra</span> <span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill fill-blue" style="width: 95%"></div></div>
+                </div>
+            </div>
+
+        </div>
+
         <section class="consejos-tecnicos">
     <div class="consejo-card">
         <div class="icon">⌨️</div>
@@ -272,9 +384,9 @@
     
     <div class="accordion">
         <details>
-            <summary>¿Qué significa que una fuente sea "80+ Gold"?</summary>
+            <summary>¿Qué significa que una fuente sea "80+ Platinum"?</summary>
             <div class="content">
-                <p>Es una certificación de eficiencia energética. Un sello <strong>Gold</strong> garantiza que la fuente aprovecha al menos el 90% de la energía que saca del enchufe, desperdiciando menos calor. Para un PC que va a estar horas encendido virtualizando, es el estándar mínimo recomendado.</p>
+                <p>Es una certificación de eficiencia energética de nivel superior. Mientras que una Gold es muy buena, el <b>sello Platinum</b> garantiza que la fuente aprovecha hasta un 92-94% de la energía eléctrica, desperdiciando el mínimo posible en forma de calor. Esto no solo reduce tu factura de la luz a largo plazo, sino que asegura que los componentes internos son de máxima calidad (condensadores japoneses), algo vital para proteger un PC de gama alta que estará encendido 24/7.</p>
             </div>
         </details>
 
