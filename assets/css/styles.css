@@ -1017,8 +1017,10 @@ details[open] summary::after {
 }
 
 .dropdown-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /* Esto hace que se vea en dos columnas limpias */
+    gap: 10px;
+    padding: 10px;
 }
 
 .dropdown-grid a {
@@ -1313,4 +1315,114 @@ details[open] summary::after {
 @keyframes blink-cursor {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+/* --- HEADER MODERNO --- */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 12, 16, 0.8);
+    backdrop-filter: blur(15px); /* Efecto cristal */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* --- LOGO --- */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: -1px;
+}
+.logo span { color: #3b82f6; }
+
+/* --- LINKS --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-item {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-item:hover { color: #fff; }
+
+/* --- BOTÓN ESPECIAL CHOLLOS --- */
+.nav-item-special {
+    background: linear-gradient(90deg, #ef4444, #f97316);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+    animation: jitter 3s infinite; /* Pequeño movimiento para atraer el ojo */
+}
+
+@keyframes jitter {
+    0%, 90% { transform: scale(1); }
+    92% { transform: scale(1.05); }
+    94% { transform: scale(1); }
+    96% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* --- BOTÓN CONSOLA (EL QUE YA TENÍAS) --- */
+.btn-nav-highlight {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+.btn-nav-highlight:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+
+/* --- DROPDOWNS MEJORADOS --- */
+.dropdown-menu {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+.dropdown-grid a {
+    color: #94a3b8;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.dropdown-grid a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    padding-left: 15px; /* Efecto desplazar al pasar ratón */
 }
