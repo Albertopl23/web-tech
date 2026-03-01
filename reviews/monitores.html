@@ -87,9 +87,9 @@
                         <a href="/gaming/pcmaestro2026.html">🖥️ Compra tu PC</a>
                         <a href="/gaming/streaming.html">📹 Mundo Streaming</a>
                         <a href="/gaming/esports.html">🏆 eSports</a>
-                        <a href="/gaming/entretenimiento.html">🎬 Entretenimiento</a>
+                        <a href="/gaming/4fun.html">🎬 Entretenimiento</a>
                         <a href="/gaming/simulacion.html">🏎️ Simulación</a>
-                        <a href="/gaming/consolas-portatiles.html">🕹️ Portátiles</a>
+                        <a href="/gaming/consola-portatiles.html">🕹️ Portátiles</a>
                         <a href="/gaming/retro.html">👾 Gaming Retro</a>
                     </div>
                 </div>
@@ -131,65 +131,125 @@
 
     <p>Tener una buena pantalla no es solo cuestión de ver más líneas de código; es una inversión en tu salud. Un monitor con mala resolución o parpadeo acaba provocando dolores de cabeza y fatiga ocular.</p>
 
+    <style>
+    .price-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .btn-shop {
+        flex: 1;
+        min-width: 160px;
+        padding: 15px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 900;
+        text-align: center;
+        font-size: 1.1rem;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.3;
+    }
+    .btn-shop span { 
+        font-size: 0.75rem; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        opacity: 0.9; 
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .btn-amz { background: #232f3e; color: #ff9900; border: 2px solid #ff9900; }
+    .btn-pcc { background: #ff601b; color: #ffffff; border: 2px solid #6d2304; }
+    .btn-shop:hover { transform: scale(1.03); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    
+    .best-deal { border: 3px solid #44d62c !important; position: relative; }
+    .best-deal::after {
+        content: "MEJOR PRECIO 🔥";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #44d62c;
+        color: #000;
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+</style>
+
     <div class="product-card" style="border-left: 5px solid #e53e3e;">
-        <img src="../img/monitores/monitores1.webp" alt="Monitor Samsung Odyssey G6 240Hz" loading="lazy">
-        <h2>1. Samsung Odyssey G6 (240Hz - El más rápido)</h2>
-        <p>Si buscas la fluidez absoluta, este panel curvo de 27" con resolución QHD (2K) es el estándar de competición.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> 240Hz reales | 1ms de respuesta.</li>
-            <li><strong>Pros:</strong> Fluidez extrema, colores muy vivos (QLED), perfecto para gaming y código.</li>
-            <li><strong>Contras:</strong> La curvatura no gusta a todo el mundo para trabajar.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4rLeFQ1" target="_blank" class="btn-read" style="background: #e53e3e;">Ver precio en Amazon →</a>
+    <img src="../img/monitores/monitores1.webp" alt="Samsung Odyssey G6 240Hz" loading="lazy">
+    <h2>1. Samsung Odyssey G6 (240Hz - El más rápido)</h2>
+    <p>Si buscas la fluidez absoluta, este panel curvo de 27" con resolución QHD (2K) es el estándar de competición.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4rLeFQ1" target="_blank" class="btn-shop btn-amz">
+            <span>Amazon</span> 625,00€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4r0syZB" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 353,29€
+        </a>
     </div>
+</div>
 
-    <div class="product-card" style="border-left: 5px solid #3182ce;">
-        <img src="../img/monitores/monitores2.webp" alt="Monitor LG UltraGear 27GR75Q IPS" loading="lazy">
-        <h2>2. LG UltraGear 27GR75Q (165Hz - Calidad/Precio)</h2>
-        <p>Un escalón por debajo en Hz pero con un panel IPS plano que ofrece una nitidez superior para leer texto sin cansar la vista.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> 165Hz | Resolución QHD (1440p).</li>
-            <li><strong>Pros:</strong> Colores muy precisos, base ergonómica, gran ángulo de visión.</li>
-            <li><strong>Contras:</strong> Los negros no son tan profundos como en paneles VA.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/3OnZptL" target="_blank" class="btn-read" style="background: #3182ce;">Ver oferta en Amazon →</a>
+<div class="product-card" style="border-left: 5px solid #3182ce;">
+    <img src="../img/monitores/monitores2.webp" alt="LG UltraGear 27GS75Q-B" loading="lazy">
+    <h2>2. LG UltraGear 27GS75Q-B (200Hz - Calidad/Precio)</h2>
+    <p>Panel IPS plano que ofrece una nitidez superior para leer código sin cansar la vista.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4aTTBzP" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 232,00€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4uaCe6T" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 240,00€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/monitores/monitores3.webp" alt="Monitor BenQ MOBIUZ EX2710S para programar" loading="lazy">
-        <h2>3. BenQ MOBIUZ EX2710S (Cuidado ocular)</h2>
-        <p>Diseñado para quienes pasan horas frente a la pantalla. Incluye tecnología para reducir la fatiga ocular sin perder fluidez.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> 144Hz | Full HD.</li>
-            <li><strong>Pros:</strong> Altavoces integrados decentes, sensor de luz ambiental, muy cómodo para la vista.</li>
-            <li><strong>Contras:</strong> En 27 pulgadas, la resolución 1080p se puede quedar algo justa.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/3MyWj5E" target="_blank" class="btn-read">Ver disponibilidad →</a>
+<div class="product-card">
+    <img src="../img/monitores/monitores3.webp" alt="BenQ MOBIUZ EX2710S" loading="lazy">
+    <h2>3. BenQ MOBIUZ EX2710 (Cuidado ocular)</h2>
+    <p>Diseñado para quienes pasan horas frente a la pantalla con sensor de luz ambiental inteligente.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/3MyWj5E" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 199,00€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/3MF9FO2" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 574,00€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/monitores/monitores4.webp" alt="Monitor gaming barato AOC Gaming 24G2SP" loading="lazy">
-        <h2>4. AOC Gaming 24G2SP (Formato 24")</h2>
-        <p>El monitor más recomendado por debajo de los 170€. Es compacto, rápido y con un diseño agresivo que queda bien en cualquier setup.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> 165Hz | 24 pulgadas.</li>
-            <li><strong>Pros:</strong> Precio imbatible, muy poco ghosting, soporte ajustable en altura.</li>
-            <li><strong>Contras:</strong> Pantalla algo pequeña si acostumbras a trabajar con muchas ventanas.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4kwDKMe" target="_blank" class="btn-read">Ver oferta actual →</a>
+<div class="product-card">
+    <img src="../img/monitores/monitores4.webp" alt="AOC Gaming 24G2SP" loading="lazy">
+    <h2>4. AOC Gaming 24G2SP (Formato 24")</h2>
+    <p>El monitor más recomendado por debajo de los 170€. Rápido, compacto y ajustable en altura.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4kwDKMe" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 115,90€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/47kLVph" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes - Reacondionado</span> 111,00€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/monitores/monitores5.webp" alt="Monitor MSI Optix G241V económico" loading="lazy">
-        <h2>5. MSI Optix G241V (La opción económica)</h2>
-        <p>Si el presupuesto es tu mayor limitación pero quieres algo mejor que un monitor de oficina básico de 60Hz.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> 75Hz | Panel IPS.</li>
-            <li><strong>Pros:</strong> Diseño sin marcos, muy estético, el precio más bajo de la lista.</li>
-            <li><strong>Contras:</strong> No es apto para gaming competitivo, pero sí para programar con soltura.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4alMiAR" target="_blank" class="btn-read">Consultar precio →</a>
+<div class="product-card">
+    <img src="../img/monitores/monitores5.webp" alt="MSI Optix G241V" loading="lazy">
+    <h2>5. MSI Optix G241 (La opción económica)</h2>
+    <p>La mejor limitación de presupuesto para programar con soltura y diseño sin marcos.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4alMiAR" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 103,70€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4b0lRRm" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 197,00€
+        </a>
     </div>
+</div>
 
     <section class="buying-guide" style="margin-top: 60px; padding: 35px; background: #f7fafc; border-radius: 15px; border: 1px solid #e2e8f0;">
     <h2 style="color: #2d3748; margin-bottom: 20px;">Cómo configurar tu monitor para programar 8 horas sin fatiga</h2>

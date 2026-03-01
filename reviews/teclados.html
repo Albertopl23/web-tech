@@ -102,7 +102,7 @@
                         <a href="/gaming/pcmaestro2026.html">🖥️ Compra tu PC</a>
                         <a href="/gaming/streaming.html">📹 Mundo Streaming</a>
                         <a href="/gaming/esports.html">🏆 eSports</a>
-                        <a href="/gaming/entretenimiento.html">🎬 Entretenimiento</a>
+                        <a href="/gaming/4fun.html">🎬 Entretenimiento</a>
                         <a href="/gaming/simulacion.html">🏎️ Simulación</a>
                         <a href="/gaming/consolas-portatiles.html">🕹️ Portátiles</a>
                         <a href="/gaming/retro.html">👾 Gaming Retro</a>
@@ -145,60 +145,128 @@
     </section>
 
     <p>Si pasas más de 6 horas al día escribiendo código, tu teclado no es un accesorio: <strong>es tu herramienta de trabajo principal</strong>. En esta guía de TechGuía, analizamos los modelos que dominan el mercado este año por su ergonomía y durabilidad.</p>
+    
+    <style>
+    .price-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .btn-shop {
+        flex: 1;
+        min-width: 160px; /* Un poco más ancho */
+        padding: 15px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 900; /* Texto bien gordo */
+        text-align: center;
+        font-size: 1.1rem; /* Precio más grande */
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.3;
+    }
+    .btn-shop span { 
+        font-size: 0.75rem; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        opacity: 0.9; 
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    
+    .btn-amz { background: #232f3e; color: #ff9900; border: 2px solid #ff9900; }
+    .btn-pcc { background: #ff601b; color: #ffffff; border: 2px solid #6d2304; }
+    
+    .btn-shop:hover { transform: scale(1.03); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    
+    .best-deal { border: 3px solid #44d62c !important; position: relative; }
+    .best-deal::after {
+        content: "MEJOR PRECIO 🔥";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #44d62c;
+        color: #000;
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+</style>
+    
     <div class="product-card" style="border-left: 5px solid #38a169;">
-        <img src="../img/teclados/teclado1.webp" alt="Teclado mecánico Keychron Q1 Max inalámbrico" loading="lazy">
-        <h2>1. Keychron Q1 Max (La Versión Definitiva)</h2>
-        <p>Es la evolución del aclamado Pro. La gran diferencia es su conexión inalámbrica de 2.4GHz y su acústica mejorada con capas de espuma adicionales para un sonido más limpio.</p>
-        <ul>
-            <li><strong>Pros:</strong> Conexión ultrarrápida (2.4GHz), sonido "thock" premium, construcción de aluminio macizo.</li>
-            <li><strong>Contras:</strong> Precio de gama alta y requiere bastante espacio en el escritorio.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4qpCpYE" target="_blank" class="btn-read" style="background: #38a169;">Ver precio en Amazon →</a>
+    <img src="../img/teclados/teclado1.webp" alt="Keychron Q1 Max" loading="lazy">
+    <h2>1. Keychron Q1 Max (La Versión Definitiva)</h2>
+    <p>Conexión inalámbrica de 2.4GHz y acústica mejorada con sonido "thock" premium.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4qpCpYE" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 249,00€
+        </a>
+        <a rel="nofollow" href="TU_LINK_PCCOM" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> NO DISPONIBLE
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/teclados/teclado2.webp" alt="Teclado Logitech MX Keys S silencioso" loading="lazy">
-        <h2>2. Logitech MX Keys S (El estándar de oficina)</h2>
-        <p>No es mecánico, pero es el teclado que verás en el 90% de las oficinas de Google o Facebook. Teclas cóncavas y silenciosas.</p>
-        <ul>
-            <li><strong>Pros:</strong> Escritura ultra rápida, multidispositivo (3 canales), batería de meses.</li>
-            <li><strong>Contras:</strong> No tiene el "clic" de un mecánico.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4a8pLIU" target="_blank" class="btn-read" style="background: #3182ce;">Ver oferta en Amazon →</a>
+<div class="product-card" style="border-left: 5px solid #3182ce;">
+    <img src="../img/teclados/teclado2.webp" alt="Logitech MX Keys S" loading="lazy">
+    <h2>2. Logitech MX Keys S (El estándar de oficina)</h2>
+    <p>Escritura ultra rápida y silenciosa. El teclado que verás en las oficinas de las Big Tech.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4a8pLIU" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 92,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4chXVvd" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 172,13€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/teclados/teclado3.webp" alt="Teclado mecánico Logitech MX Mechanical" loading="lazy">
-        <h2>3. Logitech MX Mechanical (Productividad pura)</h2>
-        <p>Ideal si vienes de portátiles y buscas algo de perfil bajo pero con la respuesta táctil de un mecánico.</p>
-        <ul>
-            <li><strong>Pros:</strong> Batería inmejorable, se conecta a 3 dispositivos, teclas retroiluminadas inteligentes.</li>
-            <li><strong>Contras:</strong> No es tan personalizable como los teclados entusiastas.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4qoIWms" target="_blank" class="btn-read">Ver oferta actual →</a>
+<div class="product-card">
+    <img src="../img/teclados/teclado3.webp" alt="Logitech MX Mechanical" loading="lazy">
+    <h2>3. Logitech MX Mechanical (Productividad pura)</h2>
+    <p>Perfil bajo con respuesta táctil mecánica. Ideal para programar durante horas sin fatiga.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4qoIWms" target="_blank" class="btn-shop btn-amz">
+            <span>Amazon</span> 120,88€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/405fNSD" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 155,99€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/teclados/teclado4.webp" alt="Teclado inalámbrico Keychron K2 formato 75%" loading="lazy">
-        <h2>4. Keychron K2 (El favorito de los minimalistas)</h2>
-        <p>El teclado mecánico más equilibrado del mercado. Formato 75% que ahorra espacio sin perder las teclas de función.</p>
-        <ul>
-            <li><strong>Pros:</strong> Estética increíble, muy robusto, ideal para setups pequeños.</li>
-            <li><strong>Contras:</strong> Es un poco alto, se recomienda usar reposamuñecas.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4ao2MZ0" target="_blank" class="btn-read">Ver disponibilidad →</a>
+<div class="product-card">
+    <img src="../img/teclados/teclado4.webp" alt="Keychron K2" loading="lazy">
+    <h2>4. Keychron K2 (El favorito de los minimalistas)</h2>
+    <p>Formato 75% que ahorra espacio. Estética increíble y construcción muy robusta para tu setup.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4ao2MZ0" target="_blank" class="btn-shop btn-amz">
+            <span>Amazon</span> 159,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4lmpHt7" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 109,99€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/teclados/teclado5.webp" alt="Teclado barato Royal Kludge RK61" loading="lazy">
-        <h2>5. Royal Kludge RK61 (El mejor para empezar)</h2>
-        <p>Si tienes un presupuesto ajustado pero quieres dar el salto al mundo mecánico, este es tu teclado.</p>
-        <ul>
-            <li><strong>Pros:</strong> Super compacto (60%), muy barato, bluetooth estable.</li>
-            <li><strong>Contras:</strong> Materiales de plástico, software algo básico.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4tw7InI" target="_blank" class="btn-read">Consultar precio →</a>
+<div class="product-card">
+    <img src="../img/teclados/teclado5.webp" alt="Royal Kludge RK61" loading="lazy">
+    <h2>5. Royal Kludge RK61 (El mejor para empezar)</h2>
+    <p>Súper compacto (60%) y económico. La puerta de entrada ideal al mundo de los teclados mecánicos.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4tw7InI" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 59,99€
+        </a>
+        <a rel="nofollow" href="TU_LINK_PCCOM" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> NO DISPONIBLE
+        </a>
     </div>
+</div>
 
     <section class="buying-guide" style="margin-top: 50px; padding: 30px; background: #fdfdfd; border: 1px solid #e2e8f0; border-radius: 12px;">
     <h2>Guía definitiva: ¿Cómo elegir tu teclado para programar?</h2>

@@ -87,9 +87,9 @@
                         <a href="/gaming/pcmaestro2026.html">🖥️ Compra tu PC</a>
                         <a href="/gaming/streaming.html">📹 Mundo Streaming</a>
                         <a href="/gaming/esports.html">🏆 eSports</a>
-                        <a href="/gaming/entretenimiento.html">🎬 Entretenimiento</a>
+                        <a href="/gaming/4fun.html">🎬 Entretenimiento</a>
                         <a href="/gaming/simulacion.html">🏎️ Simulación</a>
-                        <a href="/gaming/consolas-portatiles.html">🕹️ Portátiles</a>
+                        <a href="/gaming/consola-portatiles.html">🕹️ Portátiles</a>
                         <a href="/gaming/retro.html">👾 Gaming Retro</a>
                     </div>
                 </div>
@@ -131,65 +131,121 @@
 
     <p>Si pasas el día navegando entre miles de líneas de código, un ratón mediocre es tu peor enemigo. Buscamos ergonomía, botones configurables y una batería que no te deje tirado.</p>
 
+    <style>
+    .price-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .btn-shop {
+        flex: 1;
+        min-width: 140px;
+        padding: 15px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 900;
+        text-align: center;
+        font-size: 1.1rem;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.3;
+    }
+    .btn-shop span { 
+        font-size: 0.7rem; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        opacity: 0.9; 
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .btn-amz { background: #232f3e; color: #ff9900; border: 2px solid #ff9900; }
+    .btn-pcc { background: #ff601b; color: #ffffff; border: 2px solid #6d2304; }
+    .btn-shop:hover { transform: scale(1.03); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    
+    .best-deal { border: 3px solid #44d62c !important; position: relative; }
+    .best-deal::after {
+        content: "MEJOR PRECIO 🔥";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #44d62c; color: #000;
+        font-size: 0.65rem; padding: 2px 8px; border-radius: 4px; white-space: nowrap;
+    }
+</style>
+
     <div class="product-card" style="border-left: 5px solid #3182ce;">
-        <img src="../img/ratones/raton1.webp" alt="Ratón ergonómico Logitech MX Master 3S" loading="lazy">
-        <h2>1. Logitech MX Master 3S (El mejor para trabajar)</h2>
-        <p>Es el estándar de la industria. Su rueda de desplazamiento electromagnética permite bajar 1000 líneas por segundo en silencio absoluto.</p>
-        <ul>
-            <li><strong>DPI:</strong> 8,000 (funciona incluso sobre cristal).</li>
-            <li><strong>Pros:</strong> Botón lateral para el pulgar, gestos personalizables y carga rápida USB-C.</li>
-            <li><strong>Contras:</strong> Es pesado (no es para gaming competitivo).</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4r5wlFP" target="_blank" class="btn-read">Ver precio en Amazon →</a>
+    <img src="../img/ratones/raton1.webp" alt="Logitech MX Master 3S" loading="lazy">
+    <h2>1. Logitech MX Master 3S (El mejor para trabajar)</h2>
+    <p>Es el estándar de la industria. Su rueda electromagnética permite bajar 1000 líneas por segundo en silencio absoluto.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4r5wlFP" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 99,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/4l5Pp4M" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 109,90€
+        </a>
     </div>
+</div>
 
-    <div class="product-card" style="border-left: 5px solid #e53e3e;">
-        <img src="../img/ratones/raton2.webp" alt="Ratón de alta precisión Razer Basilisk V3 Pro" loading="lazy">
-        <h2>2. Razer Basilisk V3 Pro (Máxima Precisión)</h2>
-        <p>Para los que quieren la precisión de un ratón de competición en su setup de trabajo. Sensor óptico de última generación.</p>
-        <ul>
-            <li><strong>Velocidad:</strong> Tasa de sondeo inalámbrica real de 4000Hz (HyperPolling).</li>
-            <li><strong>Pros:</strong> Rueda de scroll inteligente y la latencia más baja del mercado.</li>
-            <li><strong>Contras:</strong> Estética muy "gamer" con mucho RGB.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4r1KvId" target="_blank" class="btn-read" style="background: #e53e3e;">Ver oferta en Amazon →</a>
+<div class="product-card" style="border-left: 5px solid #e53e3e;">
+    <img src="../img/ratones/raton2.webp" alt="Razer Basilisk V3 Pro" loading="lazy">
+    <h2>2. Razer Basilisk V3 Pro (Máxima Precisión)</h2>
+    <p>Precisión de competición en tu setup de trabajo. Sensor óptico de última generación y rueda inteligente.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4r1KvId" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 109,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/3OA7ADF" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 109,99€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/ratones/raton3.webp" alt="Ratón vertical ergonómico Logitech MX Vertical" loading="lazy">
-        <h2>3. Logitech MX Vertical (Ergonomía Pura)</h2>
-        <p>Si ya te duele la muñeca, este es tu ratón. Su ángulo de 57 grados reduce la presión en el túnel carpiano.</p>
-        <ul>
-            <li><strong>Diseño:</strong> Vertical "apretón de manos".</li>
-            <li><strong>Pros:</strong> Reduce la tensión muscular de forma inmediata.</li>
-            <li><strong>Contras:</strong> Curva de aprendizaje de un par de días para acostumbrarse.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4akt7Y2" target="_blank" class="btn-read">Ver disponibilidad →</a>
+<div class="product-card">
+    <img src="../img/ratones/raton3.webp" alt="Logitech MX Vertical" loading="lazy">
+    <h2>3. Logitech MX Vertical (Ergonomía Pura)</h2>
+    <p>Si ya te duele la muñeca, su ángulo de 57 grados reduce drásticamente la presión en el túnel carpiano.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4akt7Y2" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 66,95€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/406taSF" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 66,95€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/ratones/raton4.webp" alt="Ratón Corsair Dark Core RGB Pro con carga inalámbrica" loading="lazy">
-        <h2>4. Corsair Dark Core RGB Pro</h2>
-        <p>Un ratón robusto, con carga inalámbrica Qi y un agarre intercambiable muy cómodo para manos grandes.</p>
-        <ul>
-            <li><strong>Conectividad:</strong> Bluetooth y 2.4GHz (Slipstream).</li>
-            <li><strong>Pros:</strong> Muy configurable y se siente muy premium por su precio.</li>
-            <li><strong>Contras:</strong> El software de Corsair (iCUE) puede ser pesado.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4kzvScQ" target="_blank" class="btn-read">Ver oferta actual →</a>
+<div class="product-card">
+    <img src="../img/ratones/raton4.webp" alt="Corsair Dark Core RGB Pro" loading="lazy">
+    <h2>4. Corsair RGB </h2>
+    <p>Ratón robusto con carga inalámbrica Qi y agarres intercambiables ideales para manos grandes.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4kzvScQ" target="_blank" class="btn-shop btn-amz">
+            <span>Amazon</span> 109,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/47hHVps" target="_blank" class="btn-shop btn-pcc best-deal">
+            <span>PcComponentes</span> 89,99€
+        </a>
     </div>
+</div>
 
-    <div class="product-card">
-        <img src="../img/ratones/raton5.webp" alt="Ratón compacto Logitech MX Anywhere 3S" loading="lazy">
-        <h2>5. Logitech Anywhere 3S (Ideal para viajes)</h2>
-        <p>Si programas mucho en cafeterías o con el portátil en el sofá, este ratón compacto tiene la misma potencia que sus hermanos mayores.</p>
-        <ul>
-            <li><strong>Tamaño:</strong> Compacto y ultra ligero.</li>
-            <li><strong>Pros:</strong> Clics silenciosos y cabe en cualquier bolsillo.</li>
-            <li><strong>Contras:</strong> Puede resultar pequeño si tienes manos muy grandes.</li>
-        </ul>
-        <a rel="nofollow" href="https://amzn.to/4qmKPQB" target="_blank" class="btn-read">Consultar precio →</a>
+<div class="product-card">
+    <img src="../img/ratones/raton5.webp" alt="Logitech Anywhere 3S" loading="lazy">
+    <h2>5. Logitech Anywhere 3S (Ideal para viajes)</h2>
+    <p>Potencia en formato compacto y clics silenciosos. Perfecto para programar en cualquier lugar.</p>
+    <div class="price-buttons">
+        <a rel="nofollow" href="https://amzn.to/4qmKPQB" target="_blank" class="btn-shop btn-amz best-deal">
+            <span>Amazon</span> 75,99€
+        </a>
+        <a rel="nofollow" href="https://tidd.ly/3MXNGls" target="_blank" class="btn-shop btn-pcc">
+            <span>PcComponentes</span> 77,98€
+        </a>
     </div>
+</div>
 
     <section class="buying-guide" style="margin-top: 50px; padding: 20px; background: #f7fafc; border-radius: 8px;">
         <h2>Guía para elegir tu ratón de productividad</h2>
